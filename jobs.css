@@ -1,0 +1,592 @@
+/*
+ * ═══════════════════════════════════════════════════════════════════════════
+ * ARDCO Theme - Industry Jobs Page Styles
+ * ═══════════════════════════════════════════════════════════════════════════
+ * 
+ * Custom styles for the Industry Hub jobs page matching ARDCO design system
+ * Requires: ardco-theme.css loaded first
+ * 
+ * ═══════════════════════════════════════════════════════════════════════════
+ */
+
+/* ────────────────────────────────────────────────────────────────────────────
+   PAGE HEADER
+   ──────────────────────────────────────────────────────────────────────────── */
+.page-header {
+  position: relative;
+  background: linear-gradient(135deg, rgba(122, 167, 255, .12), rgba(110, 231, 255, .06));
+  border: 1px solid rgba(122, 167, 255, .30);
+  clip-path: polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px);
+  padding: 1.5rem 2rem;
+  overflow: hidden;
+}
+
+/* Top-left corner accent */
+.page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 60px;
+  background: linear-gradient(to bottom, var(--ardco-accent), transparent);
+  z-index: 2;
+}
+
+/* Bottom-right corner accent */
+.page-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(to left, var(--ardco-accent2), transparent);
+  z-index: 2;
+}
+
+.page-header h2,
+.page-header .h3 {
+  font-family: 'Orbitron', sans-serif !important;
+  color: var(--ardco-text) !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.25rem;
+  text-shadow: 0 0 20px rgba(122, 167, 255, .3);
+}
+
+.page-header h2 i,
+.page-header .h3 i {
+  color: var(--ardco-accent);
+  margin-right: 0.5rem;
+}
+
+.page-header .description {
+  color: var(--ardco-muted) !important;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.page-header .header-bg {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 5rem;
+  color: rgba(122, 167, 255, .08);
+  pointer-events: none;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+   FILTER SECTION
+   ──────────────────────────────────────────────────────────────────────────── */
+.row.g-3.mb-4 > .col-12 > form {
+  background: linear-gradient(180deg, rgba(15, 22, 38, .8), rgba(12, 19, 34, .9));
+  border: 1px solid rgba(122, 167, 255, .20);
+  clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);
+  padding: 1.5rem;
+  position: relative;
+}
+
+.row.g-3.mb-4 > .col-12 > form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 30px;
+  background: linear-gradient(to bottom, var(--ardco-accent), transparent);
+}
+
+.row.g-3.mb-4 > .col-12 > form .form-label {
+  font-family: 'Orbitron', sans-serif !important;
+  color: var(--ardco-accent) !important;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+   STATS CARDS
+   ──────────────────────────────────────────────────────────────────────────── */
+.stats-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .02)) !important;
+  border: 1px solid rgba(122, 167, 255, .25);
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.stats-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 25px;
+  background: linear-gradient(to bottom, var(--ardco-accent), transparent);
+}
+
+.stats-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 25px;
+  height: 2px;
+  background: linear-gradient(to left, var(--ardco-accent2), transparent);
+}
+
+.stats-card:hover {
+  border-color: rgba(122, 167, 255, .45);
+  box-shadow: 0 0 20px rgba(122, 167, 255, .15);
+}
+
+.stats-card .card-body {
+  padding: 1.25rem;
+  background: transparent !important;
+}
+
+.stats-card .h4 {
+  font-family: 'Orbitron', sans-serif !important;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.stats-card .text-info {
+  color: var(--ardco-accent2) !important;
+}
+
+.stats-card .text-warning {
+  color: #f59e0b !important;
+}
+
+.stats-card .text-success {
+  color: var(--ardco-success) !important;
+}
+
+.stats-card .text-secondary {
+  color: var(--ardco-accent) !important;
+}
+
+.stats-card small,
+.stats-card .text-muted {
+  font-family: 'Orbitron', sans-serif !important;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--ardco-muted) !important;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+   JOB GROUP SECTIONS
+   ──────────────────────────────────────────────────────────────────────────── */
+.job-group-section {
+  position: relative;
+  padding-top: 0.5rem;
+}
+
+.job-group-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(122, 167, 255, .30), transparent);
+}
+
+.job-group-section .h5 {
+  font-family: 'Orbitron', sans-serif !important;
+  color: var(--ardco-text) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 1rem;
+}
+
+.job-group-section .text-muted.small {
+  color: var(--ardco-muted) !important;
+}
+
+/* Group icon circle */
+.job-group-section .rounded-circle.bg-body-secondary {
+  background: linear-gradient(135deg, rgba(122, 167, 255, .15), rgba(110, 231, 255, .08)) !important;
+  border: 1px solid rgba(122, 167, 255, .35);
+  color: var(--ardco-accent) !important;
+}
+
+/* Group type badge */
+.job-group-section > .d-flex > .badge {
+  font-family: 'Orbitron', sans-serif !important;
+  font-size: 10px;
+  letter-spacing: 1px;
+  padding: 0.5rem 1rem;
+  clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px);
+}
+
+/* Manufacturing badge */
+.job-group-section .badge.bg-warning {
+  background: linear-gradient(135deg, rgba(245, 158, 11, .25), rgba(245, 158, 11, .15)) !important;
+  border: 1px solid rgba(245, 158, 11, .50);
+  color: #f59e0b !important;
+}
+
+/* ME Research badge */
+.job-group-section .badge.bg-success {
+  background: linear-gradient(135deg, rgba(124, 255, 178, .20), rgba(124, 255, 178, .10)) !important;
+  border: 1px solid rgba(124, 255, 178, .50);
+  color: var(--ardco-success) !important;
+}
+
+/* Copying badge */
+.job-group-section .badge.bg-info {
+  background: linear-gradient(135deg, rgba(110, 231, 255, .20), rgba(110, 231, 255, .10)) !important;
+  border: 1px solid rgba(110, 231, 255, .50);
+  color: var(--ardco-accent2) !important;
+}
+
+/* Invention badge */
+.job-group-section .badge.bg-dark {
+  background: linear-gradient(135deg, rgba(122, 167, 255, .20), rgba(122, 167, 255, .10)) !important;
+  border: 1px solid rgba(122, 167, 255, .50);
+  color: var(--ardco-accent) !important;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+   JOB CARDS
+   ──────────────────────────────────────────────────────────────────────────── */
+.job-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, .05), rgba(255, 255, 255, .02)) !important;
+  border: 1px solid rgba(122, 167, 255, .20) !important;
+  clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);
+  position: relative;
+  transition: all 0.2s ease;
+  border-radius: 0 !important;
+}
+
+.job-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 40px;
+  background: linear-gradient(to bottom, var(--ardco-accent), transparent);
+  z-index: 1;
+}
+
+.job-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(to left, var(--ardco-accent2), transparent);
+  z-index: 1;
+}
+
+.job-card:hover {
+  border-color: rgba(122, 167, 255, .40) !important;
+  box-shadow: 0 0 25px rgba(122, 167, 255, .12), 0 10px 40px rgba(0, 0, 0, .3);
+  transform: translateY(-2px);
+}
+
+.job-card .card-body {
+  background: transparent !important;
+  padding: 1.25rem;
+}
+
+.job-card .card-footer {
+  background: rgba(12, 19, 34, .5) !important;
+  border-top: 1px solid rgba(122, 167, 255, .15) !important;
+  padding: 0.75rem 1.25rem;
+}
+
+/* Job card title */
+.job-card .h6 {
+  font-family: 'Rajdhani', sans-serif !important;
+  color: var(--ardco-text) !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Job card owner */
+.job-card .text-muted.small {
+  color: var(--ardco-muted) !important;
+  font-size: 0.8rem;
+}
+
+.job-card .text-muted.small i {
+  color: var(--ardco-accent);
+}
+
+/* Job card image */
+.job-card img.rounded {
+  border: 1px solid rgba(122, 167, 255, .30);
+  border-radius: 4px !important;
+}
+
+/* Activity badge on job card */
+.job-card > .card-body > .d-flex:first-child .badge {
+  font-family: 'Orbitron', sans-serif !important;
+  font-size: 9px;
+  letter-spacing: 0.8px;
+  padding: 0.4rem 0.75rem;
+  clip-path: polygon(5px 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0 5px);
+}
+
+/* Info badges row */
+.job-card .d-flex.flex-wrap.gap-2.small .badge {
+  background: rgba(15, 22, 38, .8) !important;
+  border: 1px solid rgba(122, 167, 255, .25) !important;
+  color: var(--ardco-muted) !important;
+  font-size: 0.75rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 4px !important;
+  clip-path: none;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+   PROGRESS BARS
+   ──────────────────────────────────────────────────────────────────────────── */
+.job-progress-panel {
+  position: relative;
+}
+
+.job-progress-panel .progress {
+  height: 22px;
+  background: rgba(12, 19, 34, .8) !important;
+  border: 1px solid rgba(122, 167, 255, .25);
+  border-radius: 4px !important;
+  overflow: visible;
+  position: relative;
+}
+
+.job-progress-panel .progress-bar {
+  border-radius: 3px !important;
+  position: relative;
+  transition: width 0.5s ease;
+}
+
+/* Early stage (0-33%) */
+.progress-state-early .progress-bar,
+.progress-bar-early {
+  background: linear-gradient(90deg, rgba(122, 167, 255, .6), rgba(122, 167, 255, .8)) !important;
+  box-shadow: 0 0 10px rgba(122, 167, 255, .3);
+}
+
+/* Mid stage (34-66%) */
+.progress-state-mid .progress-bar,
+.progress-bar-mid {
+  background: linear-gradient(90deg, rgba(110, 231, 255, .6), rgba(110, 231, 255, .8)) !important;
+  box-shadow: 0 0 10px rgba(110, 231, 255, .3);
+}
+
+/* Late stage (67-100%) */
+.progress-state-late .progress-bar,
+.progress-bar-late {
+  background: linear-gradient(90deg, rgba(124, 255, 178, .6), rgba(124, 255, 178, .8)) !important;
+  box-shadow: 0 0 10px rgba(124, 255, 178, .3);
+}
+
+/* Progress label */
+.progress-label {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Orbitron', sans-serif !important;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--ardco-text);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .5);
+  z-index: 2;
+}
+
+/* Time remaining */
+.job-progress-panel small {
+  color: var(--ardco-muted) !important;
+  font-size: 0.8rem;
+}
+
+.job-progress-panel small i {
+  color: var(--ardco-accent);
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+   INFO PANELS (Research levels, Copy output, Success chance)
+   ──────────────────────────────────────────────────────────────────────────── */
+.job-card .bg-light.rounded-3 {
+  background: rgba(12, 19, 34, .6) !important;
+  border: 1px solid rgba(122, 167, 255, .15);
+  border-radius: 6px !important;
+}
+
+.job-card .bg-light.rounded-3 .text-muted.text-uppercase {
+  font-family: 'Orbitron', sans-serif !important;
+  color: var(--ardco-accent) !important;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.job-card .bg-light.rounded-3 .fw-semibold {
+  color: var(--ardco-text) !important;
+  font-weight: 600;
+}
+
+.job-card .bg-light.rounded-3 .text-muted:not(.text-uppercase) {
+  color: var(--ardco-muted) !important;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+   FOOTER SECTION (Pagination & Per Page)
+   ──────────────────────────────────────────────────────────────────────────── */
+.d-flex.flex-wrap.justify-content-between.align-items-center.mt-4 {
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(122, 167, 255, .15);
+}
+
+.d-flex.flex-wrap.justify-content-between.align-items-center.mt-4 .form-label {
+  font-family: 'Orbitron', sans-serif !important;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--ardco-muted) !important;
+}
+
+.d-flex.flex-wrap.justify-content-between.align-items-center.mt-4 .form-select {
+  background: var(--ardco-panel2) !important;
+  border: 1px solid rgba(122, 167, 255, .25) !important;
+  color: var(--ardco-text) !important;
+  font-size: 0.85rem;
+  padding: 0.4rem 2rem 0.4rem 0.75rem;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+   BUTTON OVERRIDES FOR THIS PAGE
+   ──────────────────────────────────────────────────────────────────────────── */
+.page-header .btn-outline-light {
+  border-color: rgba(122, 167, 255, .40) !important;
+  background: rgba(122, 167, 255, .08) !important;
+  color: var(--ardco-text) !important;
+  font-size: 13px;
+  clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px);
+}
+
+.page-header .btn-outline-light:hover {
+  background: rgba(122, 167, 255, .18) !important;
+  border-color: rgba(122, 167, 255, .60) !important;
+  box-shadow: 0 0 15px rgba(122, 167, 255, .2);
+}
+
+.page-header .btn-light.text-primary {
+  border: 1px solid rgba(122, 167, 255, .50) !important;
+  background: linear-gradient(135deg, rgba(122, 167, 255, .20), rgba(110, 231, 255, .12)) !important;
+  color: var(--ardco-text) !important;
+  font-size: 13px;
+  clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px);
+}
+
+.page-header .btn-light.text-primary:hover {
+  background: linear-gradient(135deg, rgba(122, 167, 255, .30), rgba(110, 231, 255, .20)) !important;
+  border-color: rgba(122, 167, 255, .70) !important;
+  box-shadow: 0 0 20px rgba(122, 167, 255, .25);
+}
+
+/* Filter apply button */
+form .btn-primary {
+  font-family: 'Orbitron', sans-serif !important;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+   RESPONSIVE ADJUSTMENTS
+   ──────────────────────────────────────────────────────────────────────────── */
+@media (max-width: 992px) {
+  .page-header {
+    clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);
+    padding: 1.25rem 1.5rem;
+  }
+  
+  .page-header .header-bg {
+    display: none;
+  }
+  
+  .page-header h2,
+  .page-header .h3 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-card {
+    clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
+  }
+  
+  .stats-card .h4 {
+    font-size: 1.5rem;
+  }
+  
+  .job-card {
+    clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
+  }
+  
+  .job-group-section > .d-flex {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+  
+  .job-group-section > .d-flex > .badge {
+    margin-top: 0.75rem;
+  }
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+   ANIMATIONS
+   ──────────────────────────────────────────────────────────────────────────── */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(122, 167, 255, .2);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(122, 167, 255, .4);
+  }
+}
+
+/* Jobs completing soon (>90%) get a pulse effect */
+.progress-state-late {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+/* Staggered card entrance */
+.job-card {
+  animation: fadeInUp 0.4s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.row.g-4 > .col-xl-4:nth-child(1) .job-card { animation-delay: 0.05s; }
+.row.g-4 > .col-xl-4:nth-child(2) .job-card { animation-delay: 0.10s; }
+.row.g-4 > .col-xl-4:nth-child(3) .job-card { animation-delay: 0.15s; }
+.row.g-4 > .col-xl-4:nth-child(4) .job-card { animation-delay: 0.20s; }
+.row.g-4 > .col-xl-4:nth-child(5) .job-card { animation-delay: 0.25s; }
+.row.g-4 > .col-xl-4:nth-child(6) .job-card { animation-delay: 0.30s; }
+
+/* ════════════════════════════════════════════════════════════════════════════
+   END OF INDUSTRY JOBS STYLES
+   ════════════════════════════════════════════════════════════════════════════ */
