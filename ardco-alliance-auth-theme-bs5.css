@@ -362,6 +362,31 @@ code {
 .table-hover tbody tr:hover {
   background: rgba(122, 167, 255, 0.08) !important;
 }
+
+/* Notifications page - white text in tables */
+#page-notifications .table,
+#page-notifications .table td,
+#page-notifications .table th,
+#page-notifications .table a,
+#page-notifications .table span,
+#page-notifications .table p,
+[class*="notification"] .table,
+[class*="notification"] .table td,
+[class*="notification"] .table th,
+[class*="notification"] .table a,
+[class*="notification"] .table span,
+.notifications .table,
+.notifications .table td,
+.notifications .table th,
+.notifications .table a,
+.notifications .table span {
+  color: white !important;
+}
+
+.table-striped tbody td, .table-success td, .table-primary td, .table-warning td {
+  color: white!important;
+}
+
 .btn {
   padding: 0.625rem 1.25rem;
   clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
